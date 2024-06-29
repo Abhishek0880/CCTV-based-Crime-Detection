@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Encrypt Image{% endblock title %}
+{% block body %}
+{% if user.is_authenticated %}
+<main id="main">
+    <!-- ======= Encrypt Image Section ======= -->
+    <section id="pricing" class="pricing mt-5">
+        <div class="container" data-aos="fade-up">
+            <div class="row mt-5 justify-content-center">
+                <div class="card col-8 text-dark text-center">
+                    <h2 class="mt-3">Image Encryption</h2>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="col-8 text-start m-auto mt-3 mb-4">
+                            <div class="mb-3">
+                                <lable> Enter First Image <span class="text-danger">*</span> </lable>
+                                {{form.image_1}}
+                            </div>
+                            <div class="mb-3">
+                                <lable> Enter Second Image <span class="text-danger">*</span> </lable>
+                                {{form.image_2}}
+                            </div>
+                            <div class="mb-5">
+                                <lable> Enter Secret Message <span class="text-danger">*</span> </lable>
+                                {{form.msg}}
+                            </div>
+                            <div class="text-center mb-3">
+                                <button class="btn btn-dark" type="submit">Encrypt Image</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Section -->
+</main>
+{% endif %}
+{% endblock body %}

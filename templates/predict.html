@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Encrypt Image{% endblock title %}
+{% block body %}
+{% if user.is_authenticated %}
+<main id="main">
+    <!-- ======= Encrypt Image Section ======= -->
+    <section id="pricing" class="pricing mt-5">
+        <div class="container" data-aos="fade-up">
+            <div class="row mt-5 justify-content-center">
+                <div class="card col-8 text-dark text-center">
+                    
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <video class="mt-4" width="400" controls>
+                            <source src="{{ upload_video.video.url }}" type="video/mp4">
+                        </video>
+                        <div class="text-center mb-3 mt-4">
+                            <h1> Predicted Class : {{predicted_class}}</h1>
+                        </div>
+                        <div class="text-center mb-3 mt-4">
+                            <a href="dashboard" class="btn btn-dark">Dashboard</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Section -->
+</main>
+{% endif %}
+{% endblock body %}

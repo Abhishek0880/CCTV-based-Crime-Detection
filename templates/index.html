@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(static/img/slide/1.jpg)">
+          <div class="container">
+            <h2>Welcome to <br> <span>Crime Identification System</span></h2>
+            {% comment %} <p>During the time when Machine Learning and Deep Learning are booming so much , it is very important to understand that all this knowledge is not of any use if we cant apply it to different areas and impact the humanity.</p> {% endcomment %}
+            <a href="log_in" class="btn-get-started scrollto">Login</a>
+            <a href="register" class="btn-get-started scrollto">Register</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(static/img/slide/2.webp)">
+          <div class="container">
+            <h2>Crime Identification System</h2>
+            {% comment %} <p>The system used into the field of Medical Science and making the task of Physician easy. With the Help of this option we can able to Predict 42 different types of diseases.</p> {% endcomment %}
+            <a href="log_in" class="btn-get-started scrollto">Login</a>
+            <a href="register" class="btn-get-started scrollto">Register</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(static/img/slide/3.jpeg)">
+          <div class="container">
+            <h2>Crime Identification System</h2>
+            {% comment %} <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p> {% endcomment %}
+            <a href="log_in" class="btn-get-started scrollto">Login</a>
+            <a href="register" class="btn-get-started scrollto">Register</a>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+{% endblock body %}

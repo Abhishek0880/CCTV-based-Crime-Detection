@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock title %}
+
+{% block body %}
+
+<main id="main">
+    <!-- ======= Login Section ======= -->
+    <section id="register" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>User Registration Form</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <img src="static/img/detective-icon-investigator-153697016.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <lable><h5>First Name <span style="color:red">*</span></h5></lable>
+                              <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <lable><h5>Last Name <span style="color:red">*</span></h5></lable>
+                              <input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name" required>
+                            </div>
+                          </div>
+                        <div class="form-group mt-3">
+                            <lable><h5>Email <span style="color:red">*</span></h5></lable>
+                            <input type="email" class="form-control" name="username" id="username" placeholder="Email Address"
+                                required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <lable><h5>Password <span style="color:red">*</span></h5></lable>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password"
+                                required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <lable><h5>Re-Enter Password <span style="color:red">*</span></h5></lable>
+                            <input type="password" class="form-control" name="password1" id="password1" placeholder="Password"
+                                required>
+                        </div>
+                        <div class="text-center mt-3"><button class="btn btn-outline-light" type="submit">Submit</button></div>
+            
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Login Section -->
+</main>
+
+{% endblock body %}
